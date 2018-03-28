@@ -1,0 +1,14 @@
+{
+  "platformName": "Android",
+  "platformVersion": "6.0",
+  "deviceName": "Android Accelerated x86",
+  "avd": "Android_Accelerated_x86",
+  "autoAcceptAlerts": "true",
+  "unicodeKeyboard": "true",
+  "avdReadyTimeout": 30000,
+  "locale": "RU",
+  "language": "ru",
+  "appPackage": "com.avito.android",
+  "appActivity": "com.avito.android.ui.activity.CategoryListActivity",
+  "autoGrantPermissions": "true"
+}
