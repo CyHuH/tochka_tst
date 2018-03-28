@@ -44,4 +44,8 @@ def _(context):
     current_titles = get_titles(context.base_elements.product_titles)
     context.base_elements.favorite_buttons[0].click()
     new_titles = get_titles(context.base_elements.product_titles)
-    assert current_titles[0] not in new_titles, '{0} and {1}'.format(current_titles, new_titles)
+    # проверяем, что элемент удалился
+    assert current_titles[0] not in new_titles, '{0} in {1}'.format(current_titles[0], new_titles)
+    # проверяем, что остальные элементы остались
+    for i in range(len(new_titles)):
+        assert new_titles[i] in current_titles, '{0} is not in {1}'.format(new_titles[i], current_titles)
